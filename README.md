@@ -36,7 +36,9 @@ That's it. Run XEMsign.js using:
 
 nodejs pathTo/XEMsign.js
 
-<b>WARNING: As the wallet password is exposed you shouldn't store any funds on it !</b>
+# Warning 
+
+<b>As the wallet password is exposed you shouldn't store any funds on it !</b>
 
 To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use these computers for surfing the net.
 
