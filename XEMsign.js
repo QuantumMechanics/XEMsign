@@ -3,13 +3,6 @@
 // include the required class
 NEM     = require('./NEM.js');
 
-/*
-define the initial configuration parameters
-if not defined the defaults will be used
-WARNING use only a local NIS.
-*/
-//var conf = { 'nis_address': 'go.nem.ninja'};
-
 // create an instance using a user defined configuration options
 var nem = new NEM();
 
