@@ -5,6 +5,10 @@ Automated cosignature for XEM Cryptocurrency
 
 First you need NodeJs.
 
+Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
+
+You must have a local NCC running connected to a local or remote NIS.
+
 Because I wanted it to be as light as possible, I'm using a local NCC to sign the multisig transactions and a remote NIS to propagate it.
 So, the cosignatory account need to be in a wallet that belongs to your local NCC.
 
