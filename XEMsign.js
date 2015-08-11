@@ -17,7 +17,7 @@ var nem = new NEM();
 var minutes = 1, the_interval = minutes * 60 * 1000;
 setInterval(function() {
 
-//Now we poll the unconfirmed transactions using local NCC
+//Now we pull the unconfirmed transactions using local NCC
 //Below you need to set the cosignatory account
 var data = {
     account: "NCSRY3X454ZCT4OQQJZBBCPKFMEMXKXMR4M6Y62N"
@@ -34,7 +34,7 @@ var XEMsign = function(data) {
 obj = JSON.parse(d);
 dataHash = obj.transactions[0].innerHash.data;
 
-// MultisigSignatureRequest model view
+// MultisigSignatureRequest model view (put your informations below, dataHash is automatically set from pulling unconfirmed transactions)
 var transac = {
 wallet: "YourWallet",
 password: "PasswordForThisWallet",
