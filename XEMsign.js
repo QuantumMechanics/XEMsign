@@ -3,7 +3,7 @@
 // include the required class
 NEM     = require('./NEM.js');
 
-// create an instance using a user defined configuration options
+// create an instance using a default configuration options
 var nem = new NEM();
 
 //Every 1 minutes, we check for unconfirmed transactions
