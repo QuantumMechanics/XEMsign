@@ -1,0 +1,3 @@
+[submodule "nodejs2nem"]
+	path = nodejs2nem
+	url = https://github.com/NewEconomyMovement/nodejs2nem.git
