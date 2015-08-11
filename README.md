@@ -11,6 +11,7 @@ So, the cosignatory account need to be in a wallet that belongs to your local NC
 Then you need to insert correct informations inside XEMsign.js:
 
 On line 17, minutes is the number of minutes between each pull, set by default to 1 for testing but It can be set to 60 for 1 hour...
+
 On line 23 set the account you want to watch new unconfirmed transactions for.
 
 On line 38 we initiate signature process using the view MultisigSignatureRequest:
