@@ -15,15 +15,24 @@ On line 23 set the account you want to watch new unconfirmed transactions for.
 On line 38 we initiate signature process using the view MultisigSignatureRequest:
 
 {
+
 wallet: "YourWallet",
+
 password: "PasswordForThisWallet",
+
 account: "TheCosignatoryAccount",
+
 multisigAddress: "TheMultisigAccount",
-innerHash:  {
+
+innerHash:
+{
                 data: dataHash (automatically inserted after the pull)
             },
+            
 hoursDue: 24,
+
 fee: 6000000
+
 }
 
 That's it. Run XEMsign.js using:
