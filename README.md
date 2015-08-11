@@ -41,4 +41,4 @@ WARNING: As the wallet password is exposed you shouldn't store any funds on it !
 To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use these computers for surfing the net.
 
 WORK IN PROGRESS
-- XEMsignMaster.js: Only sign fixed transactions amount and not more the N XEM a day.
+- XEMsignMaster.js: Only sign fixed transactions amount and not more than N XEM a day.
