@@ -23,16 +23,16 @@ Then you need to insert correct informations inside XEMsign.js:
 
 -Line 38: your wallet informations and transaction parameters:
 
-{
-wallet: "YourWallet",
-password: "PasswordForThisWallet",
-account: "TheCosignatoryAccount",
-multisigAddress: "TheMultisigAccount",
-innerHash: {
-                data: dataHash (do not change, automatically inserted after the pull)
-            },
-hoursDue: 24,
-fee: 6000000
+{<br>
+wallet: "YourWallet",<br>
+password: "PasswordForThisWallet",<br>
+account: "TheCosignatoryAccount",<br>
+multisigAddress: "TheMultisigAccount",<br>
+innerHash: {<br>
+                data: dataHash (do not change, automatically inserted after the pull)<br>
+            },<br>
+hoursDue: 24,<br>
+fee: 6000000<br>
 }
 
 That's it. Run XEMsign.js using:
