@@ -10,14 +10,10 @@ Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/node
 You must have a local NCC running connected to a local or remote NIS.
 
 Because I wanted it to be as light as possible, we use a local NCC to sign the multisig transactions and a remote NIS to propagate it.
-So, the cosignatory account needs to be in a wallet that belongs to your local NCC.
-
-To connect your NCC to a remote NIS:
-
--Run the NCC only
-
--In settings choose Remote Server and enter the Host (you can choose an host <a href="http://www.nodeexplorer.com/" target="_blank">here</a>)
-
+So, the cosignatory account needs to be in a wallet that belongs to your local NCC.<br>
+To connect your NCC to a remote NIS:<br>
+-Run the NCC only<br>
+-In settings choose Remote Server and enter the Host (you can choose an host <a href="http://www.nodeexplorer.com/" target="_blank">here</a>)<br>
 -Save. Now you can close your browser and let the NCC run in background.
 
 Then you need to insert correct informations inside XEMsign.js:
