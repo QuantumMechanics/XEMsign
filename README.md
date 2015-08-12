@@ -4,7 +4,7 @@ Automated cosignature for XEM Cryptocurrency
 # How to
 
 You must have a local NCC running connected to a local or remote NIS.<br>
-If you want it to be as light as possible, you can use a local NCC to sign the multisig transactions and a remote NIS to propagate it. The cosignatory account needs to be in a wallet that belongs to your local NCC.<br><br>
+If you want it to be as light as possible, you can use a local NCC to sign the multisig transactions and a remote NIS to propagate them. The cosignatory account needs to be in a wallet that belongs to your local NCC.<br><br>
 To connect your NCC to a remote NIS:<br>
 -Run the NCC only<br>
 -In settings choose Remote Server and enter the Host (you can choose an host <a href="http://www.nodeexplorer.com/" target="_blank">here</a>)<br>
@@ -44,4 +44,4 @@ nodejs pathTo/XEMsign.js
 
 <b>As the wallet password is exposed you shouldn't store any funds on it !</b>
 
-To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use these computers for surfing the net.
+To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use those computers for surfing the net.
