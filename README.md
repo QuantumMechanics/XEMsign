@@ -4,7 +4,7 @@ Automated cosignature for XEM Cryptocurrency
 # How to
 
 You must have a local NCC running connected to a local or remote NIS.<br>
-Because I wanted it to be as light as possible, we use a local NCC to sign the multisig transactions and a remote NIS to propagate it.
+If you want it to be as light as possible, you can use a local NCC to sign the multisig transactions and a remote NIS to propagate it.<br>
 So, the cosignatory account needs to be in a wallet that belongs to your local NCC.<br><br>
 To connect your NCC to a remote NIS:<br>
 -Run the NCC only<br>
