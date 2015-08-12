@@ -11,7 +11,7 @@ console.log(start);
 
 //Starting with 0
 var dailyAmount = 0;
-var amount = 0;
+var amount = [];
 var time = 0;
 
 //Every 5 minutes, we check for unconfirmed transactions
@@ -35,29 +35,41 @@ var XEMsign = function(data) {
 
 //output a pretty formated JSON text
     var d = JSON.stringify(data,null,4);
-    console.log(d);
+    /*console.log(d);*/ //show all the pull
 
 //parsing Json to get the multisig transaction hash
 obj = JSON.parse(d);
-dataHash = obj.transactions[0].innerHash.data;
+totalUnconfirmed = obj.transactions.length;
+var i;
+var dataHash = [];
+for (i = 0; i < totalUnconfirmed; i++)
+{
+dataHash[i] = obj.transactions[i].innerHash.data;
+console.log("Transaction hash:");
+console.log(dataHash[i]);
 
 //parsing Json to get the amount for daily amount 
 obj2 = JSON.parse(d);
-dailyAmount += obj.transactions[0].inner.amount/1000000;
+dailyAmount += obj.transactions[i].inner.amount/1000000;
+console.log("Dayli amount:");
+console.log(dailyAmount);
 
 //parsing Json to get the amount
 obj3 = JSON.parse(d);
-amount = obj.transactions[0].inner.amount/1000000;
+amount[i] = obj.transactions[i].inner.amount/1000000;
+console.log("Transaction amount:");
+console.log(amount[i]);
 
 // MultisigSignatureRequest model view (put your informations below, dataHash is automatically set from pulling unconfirmed transactions)
-var transac = {
+var transac = [];
+transac[i] = {
 wallet: "YourWallet",
 password: "PasswordForThisWallet",
 account: "TheCosignatoryAccount",
 multisigAddress: "TheMultisigAccount",
-innerHash:  {
-                data: dataHash
-            },
+innerHash: {
+data: dataHash
+},
 hoursDue: 24,
 fee: 6000000
 };
@@ -68,24 +80,27 @@ var toPrettyJson = function(transac) {
     console.log(e);
 };
 
-//Maximal Amount is 50 XEM
-if (amount > 50)
+
+//Maximal Amount is 100 XEM
+if (amount[i] > 100)
 {
-	var deletethis = "There is a problem, only 50 XEMs transaction allowed !";
-	console.log(deletethis);
+	console.log("There is a problem, only 50 XEMs transaction allowed !");
+	console.log("Following Transaction cause problems:");
+	console.log(dataHash[i]);
 	return; //In this case we stop cosigning
 }
 //Maximum dayliAmount is 100000 XEM
 else if (dailyAmount < 100000)
 {
 //Sign transaction
-nem.nccPost('/wallet/account/signature/send',transac
+nem.nccPost('/wallet/account/signature/send',transac[i]
     ,function(err) {
         console.log(err);
     }
     ,toPrettyJson
 );
-
+	console.log("Total transactions: ");
+	console.log(totalUnconfirmed);
 	time =+ minutes * 60 * 1000;
 	console.log("Done, waiting...");
 
@@ -96,10 +111,11 @@ nem.nccPost('/wallet/account/signature/send',transac
 		time =+ minutes * 60 * 1000;
 	}
 
+} //end for
 
 };
 
-//Pull unconfirmed transactions from cosignatory account
+//Pull unconfirmed transactions in cosignatory account
 nem.nccPost('/account/transactions/unconfirmed',data
     ,function(err) {
         console.log(err);
