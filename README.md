@@ -1,6 +1,13 @@
 # XEMsign
 Automated cosignature for XEM Cryptocurrency
 
+# Features
+- Batch transactions
+- Timer
+- Max amount per tx
+- Max dayli amount
+- Transaction details
+
 # How to
 
 You must have a local NCC running connected to a local or remote NIS.<br>
