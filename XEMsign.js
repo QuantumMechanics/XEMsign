@@ -71,9 +71,9 @@ var toPrettyJson = function(transac) {
 //Maximal Amount is 50 XEM
 if (amount > 50)
 {
-	var deletethis = "There is a problem, only 50 XEMs transaction allowed";
+	var deletethis = "There is a problem, only 50 XEMs transaction allowed !";
 	console.log(deletethis);
-	return;
+	return; //In this case we stop cosigning
 }
 //Maximum dayliAmount is 100000 XEM
 else if (dailyAmount < 100000)
