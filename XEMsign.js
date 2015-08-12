@@ -27,7 +27,7 @@ setInterval(function() {
 //Now we pull the unconfirmed transactions using local NCC
 //Below you need to set the cosignatory account
 var data = {
-    account: "NCSRY3X454ZCT4OQQJZBBCPKFMEMXKXMR4M6Y62N"
+    account: "TheCosignatoryAccount"
 };
 
 //Initiate signature request
