@@ -37,7 +37,7 @@ password: "PasswordForThisWallet",<br>
 account: "TheCosignatoryAccount",<br>
 multisigAddress: "TheMultisigAccount",<br>
 innerHash: {<br>
-                data: dataHash (do not change, automatically inserted after the pull)<br>
+                data: dataHash[i] (do not change, automatically inserted after the pull)<br>
             },<br>
 hoursDue: 24,<br>
 fee: 6000000<br>
