@@ -17,11 +17,11 @@ To connect your NCC to a remote NIS:<br>
 
 Then you need to insert correct informations inside XEMsign.js:
 
--On line 17, minutes is the number of minutes between each pull, set by default to 1 for testing but It can be set to 60 for 1 hour...
+-Line 17: minutes is the number of minutes between each pull, set by default to 1 for testing but It can be set to 60 for 1 hour...
 
--On line 23, the account you want to watch new unconfirmed transactions for.
+-Line 23: the account you want to watch new unconfirmed transactions for.
 
--On line 38, your wallet informations and transaction parameters:
+-Line 38: your wallet informations and transaction parameters:
 
 {
 wallet: "YourWallet",
