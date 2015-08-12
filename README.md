@@ -18,7 +18,7 @@ Then you need to insert correct informations inside XEMsign.js:
 
 -Line 17: minutes is the number of minutes between each pull, set by default to 5 (1 seems to cause resignature of the same transaction)
 
--Line 72: 50 is the maximal XEM amount per tx.
+-Line 72: 50 is the maximal XEM amount per tx, in case of a bigger transaction, the program stop.
 
 -Line 83: 100000 is maximal amount per days.
 
