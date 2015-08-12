@@ -71,13 +71,9 @@ var toPrettyJson = function(transac) {
 //Maximal Amount is 50 XEM
 if (amount > 50)
 {
-	var deletethis = "I delete this !";
+	var deletethis = "There is a problem, only 50 XEMs transaction allowed";
 	console.log(deletethis);
-	dailyAmount = dailyAmount - amount;
-	time =+ minutes * 60 * 1000;
-	//Delete it
-	//or redirect to main account
-	//Work in progress
+	return;
 }
 //Maximum dayliAmount is 100000 XEM
 else if (dailyAmount < 100000)
