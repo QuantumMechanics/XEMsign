@@ -21,8 +21,7 @@ Then you need to insert correct informations inside XEMsign.js:
 
 -Line 23: the account you want to watch new unconfirmed transactions for.
 
--Line 38: your wallet informations and transaction parameters:
-
+-Line 38: your wallet informations and transaction parameters:<br>
 {<br>
 wallet: "YourWallet",<br>
 password: "PasswordForThisWallet",<br>
