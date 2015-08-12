@@ -13,8 +13,11 @@ Because I wanted it to be as light as possible, we use a local NCC to sign the m
 So, the cosignatory account needs to be in a wallet that belongs to your local NCC.
 
 To connect your NCC to a remote NIS:
+
 -Run the NCC only
+
 -In settings choose Remote Server and enter the Host (you can choose an host <a href="http://www.nodeexplorer.com/" target="_blank">here</a>)
+
 -Save. Now you can close your browser and let the NCC run in background.
 
 Then you need to insert correct informations inside XEMsign.js:
