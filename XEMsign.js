@@ -115,7 +115,7 @@ nem.nccPost('/wallet/account/signature/send',transac[i]
 
 };
 
-//Pull unconfirmed transactions in cosignatory account
+//Pull unconfirmed transactions from cosignatory account
 nem.nccPost('/account/transactions/unconfirmed',data
     ,function(err) {
         console.log(err);
