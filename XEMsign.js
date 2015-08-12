@@ -102,7 +102,7 @@ nem.nccPost('/wallet/account/signature/send',transac[i]
 	console.log("Total transactions: ");
 	console.log(totalUnconfirmed);
 	time =+ minutes * 60 * 1000;
-	console.log("Done, waiting...");
+	console.log("Done");
 
 }
 	else{
