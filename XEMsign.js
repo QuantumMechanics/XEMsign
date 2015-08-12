@@ -68,7 +68,7 @@ var toPrettyJson = function(transac) {
     console.log(e);
 };
 
-//Maximal Amount is 10 XEM
+//Maximal Amount is 50 XEM
 if (amount > 50)
 {
 	var deletethis = "I delete this !";
