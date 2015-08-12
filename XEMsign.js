@@ -84,7 +84,7 @@ var toPrettyJson = function(transac) {
 //Maximal Amount is 100 XEM
 if (amount[i] > 100)
 {
-	console.log("There is a problem, only 50 XEMs transaction allowed !");
+	console.log("There is a problem, only 100 XEMs transaction allowed !");
 	console.log("Following Transaction cause problems:");
 	console.log(dataHash[i]);
 	return; //In this case we stop cosigning
