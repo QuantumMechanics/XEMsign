@@ -32,7 +32,7 @@ Then you need to insert correct informations inside XEMsign.js:
 
 -Line 38: your wallet informations and transaction parameters:<br>
 {<br>
-wallet: "YourWallet",<br>
+<code>wallet: "YourWallet",<br>
 password: "PasswordForThisWallet",<br>
 account: "TheCosignatoryAccount",<br>
 multisigAddress: "TheMultisigAccount",<br>
@@ -41,7 +41,7 @@ innerHash: {<br>
             },<br>
 hoursDue: 24,<br>
 fee: 6000000<br>
-}
+}</code>
 
 That's it. Run XEMsign.js using:
 
