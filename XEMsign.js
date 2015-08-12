@@ -68,7 +68,7 @@ password: "PasswordForThisWallet",
 account: "TheCosignatoryAccount",
 multisigAddress: "TheMultisigAccount",
 innerHash: {
-data: dataHash
+data: dataHash[i]
 },
 hoursDue: 24,
 fee: 6000000
