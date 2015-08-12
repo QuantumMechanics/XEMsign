@@ -14,7 +14,7 @@ var dailyAmount = 0;
 var amount = 0;
 var time = 0;
 
-//Every 1 minutes, we check for unconfirmed transactions
+//Every 5 minutes, we check for unconfirmed transactions
 var minutes = 5, the_interval = minutes * 60 * 1000;
 setInterval(function() {
 
