@@ -15,7 +15,7 @@ Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/node
 
 Then you need to insert correct informations inside XEMsign.js:
 
--Line 17: minutes is the number of minutes between each pull, set by default to 5 (1 seems to cause resignature of the same transaction)
+-Line 17: minutes is the number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmations and still unconfirmed).
 
 -Line 72: 50 is the maximal XEM amount per tx, in case of a bigger transaction, the program stop.
 
