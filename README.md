@@ -4,7 +4,7 @@ Automated cosignature for XEM Cryptocurrency
 # Features
 - Batch transactions
 - Timer
-- Max amount per tx
+- Max amount per tx, XEMsign stops if amount exceeded (meaning something goes wrong)
 - Max dayli amount
 - Transaction details
 
