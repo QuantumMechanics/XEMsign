@@ -51,6 +51,3 @@ Normally it should work out of the box (do not forget NEM.js). If not, you need 
 <b>As the wallet password is exposed you shouldn't store any funds on it !</b>
 
 To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use those computers for surfing the net.
-
-#To do
-- Password encrypted config file
