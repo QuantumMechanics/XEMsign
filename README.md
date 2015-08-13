@@ -22,17 +22,11 @@ You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
 
 Then you need to insert correct informations inside access.json:<br>
-{<br>
-"wallet" : "yourWallet",<br>
-"walletPassword" : "yourWalletPassword",<br>
-"cosignatoryAccount" : "cosignatoryAccount",<br>
-"multisigAddress" : "multisigAccountAddress",<br>
-"hoursDue" : 24,<br>
-"fee" : 6000000,<br>
-"timer" : 1, //Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmations and still unconfirmed).<br>
-"dayliTimer" : 1440, //Timer before dayliAmount reset to 0<br>
-"maxAmount" : 100, //Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
-"maxDayliAmount" : 100000 //Maximal amount per days.<br>
+- Wallet infos
+- timer: Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmations and still unconfirmed).<br>
+dayliTimer: Timer before dayliAmount reset to 0 in minutes<br>
+maxAmount: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
+maxDayliAmount: Maximal amount per days.<br>
 }<br>
 
 That's it. Run XEMsign.js using:
