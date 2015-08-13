@@ -1,0 +1,12 @@
+{ 
+"wallet" : "yourWallet",
+"walletPassword" : "yourWalletPassword",
+"cosignatoryAccount" : "cosignatoryAccount",
+"multisigAddress" : "multisigAccountAddress",
+"hoursDue" : 24,
+"fee" : 6000000,
+"timer" : 1,
+"dayliTimer" : 1440,
+"maxAmount" : 100,
+"maxDayliAmount" : 100000
+}
