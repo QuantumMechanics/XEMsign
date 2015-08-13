@@ -23,7 +23,7 @@ Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/node
 
 Then you need to insert correct informations inside access.json:<br>
 - <b>Wallet & transaction informations</b>
-- <b>timer</b>: Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmations and still unconfirmed).<br>
+- <b>timer</b>: Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmed).<br>
 - <b>dayliTimer</b>: Timer before dayliAmount reset to 0 in minutes<br>
 - <b>maxAmount</b>: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
 - <b>maxDayliAmount</b>: Maximal amount per days.<br>
