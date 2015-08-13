@@ -42,6 +42,10 @@ nodejs pathTo/XEMsign.js
 Enter a password to encrypt access.json, then you MUST delete the old uncrypted access.json and empty your bin.<br>
 Start XEMsign again. Enter the password you've chosen and your're good.
 
+Normally it should work out of the box. If not, you need to install express and secure-conf:
+- Express: npm install express
+- Secure-conf: npm install secure-conf
+
 # Warning 
 
 <b>As the wallet password is exposed you shouldn't store any funds on it !</b>
