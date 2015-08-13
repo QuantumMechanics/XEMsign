@@ -27,7 +27,6 @@ Then you need to insert correct informations inside access.json:<br>
 dayliTimer: Timer before dayliAmount reset to 0 in minutes<br>
 maxAmount: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
 maxDayliAmount: Maximal amount per days.<br>
-}<br>
 
 That's it. Run XEMsign.js using:
 
