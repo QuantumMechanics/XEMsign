@@ -4,11 +4,13 @@ console.log("=================================================");
 console.log("\n");
 
 var fs = require('fs'); 
+//Check access.json
 if (fs.existsSync('./access.json')) {
 	console.log("Enter a password to encrypt access.json:");
 	var SecureConf = require('secure-conf');
 	var sconf      = new SecureConf();
-
+	
+	//Encryption
 	sconf.encryptFile(
 	    "./access.json",
 	    "./access.json.enc",
@@ -33,9 +35,11 @@ if (fs.existsSync('./access.json')) {
 	var ef         = "./access.json.enc";
 	var express    = require('express');
 	var app        = express();
+	
+	//Decryption
 	sconf.decryptFile(ef, function(err, file, content) {
                 if (err) {
-		      console.log("Wrong password !");
+		      console.log("Wrong password !"); //Not showing up...
                    // console.log('Failed to decrypt %s, error is %s', file, err);
                 } else {
 		    console.log("\n");
@@ -57,7 +61,7 @@ if (fs.existsSync('./access.json')) {
 		   
 			//Setting the timer
 			var the_interval = _timer * 60 * 1000;
-
+			
 			 console.log("Success...");
 			 console.log("\n");
 			 console.log("Starting first check in", _timer, "minutes");
@@ -76,14 +80,13 @@ if (fs.existsSync('./access.json')) {
 			//Every 5 minutes, we check for unconfirmed transactions
 			setInterval(function() {
 
-				//If 24h => reset amount
+				//If 24h => reset dailyAmount
 				if (time == _dailyTimer * 60 * 1000)
 				{
-					amount = 0;
+					dailyAmount = 0;
 				}
 
 			//Now we pull the unconfirmed transactions using local NCC
-			//Below you need to set the cosignatory account
 			var data = {
 			    account: _cosignatoryAccount
 			};
@@ -93,10 +96,12 @@ if (fs.existsSync('./access.json')) {
 
 			//output a pretty formated JSON text
 			    var d = JSON.stringify(data,null,4);
-			    //console.log(d); //show all the pull
+			    //console.log(d); //show all the pull 
 
-			//parsing Json to get the multisig transaction hash
+			//parsing Json
 			obj = JSON.parse(d);
+			
+			//Get total unconfirmed tx number
 			totalUnconfirmed = obj.transactions.length;
 
 			if (totalUnconfirmed == 0)
@@ -108,8 +113,9 @@ if (fs.existsSync('./access.json')) {
 			{
 			var i;
 			var dataHash = [];
-			for (i = 0; i < totalUnconfirmed; i++)
+			for (i = 0; i < totalUnconfirmed; i++) //We batch tx
 			{
+			//Get inner hashes
 			dataHash[i] = obj.transactions[i].innerHash.data;
 			console.log("Transaction hash:");
 			console.log(dataHash[i]);
@@ -147,10 +153,10 @@ if (fs.existsSync('./access.json')) {
 			};
 
 
-			//Maximal Amount is 100 XEM
+			//Maximal Amount is 100 XEM per tx
 			if (amount[i] > _maxAmount)
 			{
-				console.log("There is a problem, only 50 XEMs transaction allowed !");
+				console.log("There is a problem, only 100 XEMs transaction allowed !");
 				console.log("Following Transaction cause problems:");
 				console.log(dataHash[i]);
 				return; //In this case we stop cosigning
@@ -165,6 +171,7 @@ if (fs.existsSync('./access.json')) {
 			    }
 			    ,toPrettyJson
 			);
+				//Batch report
 				console.log("Total transactions: ");
 				console.log(totalUnconfirmed);
 				time =+ _timer * 60 * 1000;
@@ -183,7 +190,7 @@ if (fs.existsSync('./access.json')) {
 
 			};
 
-			//Pull unconfirmed transactions in cosignatory account
+			//Pull unconfirmed transactions from cosignatory account
 			nem.nccPost('/account/transactions/unconfirmed',data
 			    ,function(err) {
 				console.log(err);
