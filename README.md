@@ -28,7 +28,7 @@ Then you need to insert correct informations inside access.json:<br>
 - <b>maxAmount</b>: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
 - <b>maxDayliAmount</b>: Maximal amount per days.<br>
 
-That's it. Run XEMsign.js using:
+Next, Run XEMsign.js using:
 
 nodejs pathTo/XEMsign.js
 
