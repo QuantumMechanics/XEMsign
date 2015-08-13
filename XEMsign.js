@@ -5,7 +5,7 @@ console.log("\n");
 
 var fs = require('fs'); 
 if (fs.existsSync('./access.json')) {
-	console.log("Please, enter a password to encrypt access.json:");
+	console.log("Enter a password to encrypt access.json:");
 	var SecureConf = require('secure-conf');
 	var sconf      = new SecureConf();
 
@@ -20,14 +20,14 @@ if (fs.existsSync('./access.json')) {
 		    console.log("encrypt %s to %s complete.", f, ef);
 		    console.log("encrypted contents are %s", ec);
 		    console.log("\n");
-		    console.log("NOW DELETE access.json AND RESTART XEMsign");
+		    console.log("NOW DELETE access.json, EMPTY YOUR BIN AND RESTART XEMsign");
 		    console.log("\n");
 		}
 	    }
 	);
 }
 	else{
-	console.log("Please, enter your password start XEMsign:");
+	console.log("Enter your password start XEMsign:");
 	var SecureConf = require('secure-conf');
 	var sconf      = new SecureConf();
 	var ef         = "./access.json.enc";
