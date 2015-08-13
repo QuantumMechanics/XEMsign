@@ -22,7 +22,7 @@ You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
 
 Then you need to insert correct informations inside access.json:<br>
-<code>{<br>
+{<br>
 "wallet" : "yourWallet",<br>
 "walletPassword" : "yourWalletPassword",<br>
 "cosignatoryAccount" : "cosignatoryAccount",<br>
@@ -33,7 +33,7 @@ Then you need to insert correct informations inside access.json:<br>
 "dayliTimer" : 1440, //Timer before dayliAmount reset to 0<br>
 "maxAmount" : 100, //Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
 "maxDayliAmount" : 100000 //Maximal amount per days.<br>
-}<br></code>
+}<br>
 
 That's it. Run XEMsign.js using:
 
