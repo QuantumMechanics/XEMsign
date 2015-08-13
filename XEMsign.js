@@ -40,6 +40,14 @@ var XEMsign = function(data) {
 //parsing Json to get the multisig transaction hash
 obj = JSON.parse(d);
 totalUnconfirmed = obj.transactions.length;
+
+if (totalUnconfirmed == 0)
+{
+	console.log("\n");
+	console.log("No transaction to sign. Waiting...");
+}
+else
+{
 var i;
 var dataHash = [];
 for (i = 0; i < totalUnconfirmed; i++)
@@ -112,6 +120,8 @@ nem.nccPost('/wallet/account/signature/send',transac[i]
 	}
 
 } //end for
+
+}
 
 };
 
