@@ -2,6 +2,7 @@
 Automated cosignature for XEM Cryptocurrency
 
 # Features
+- Password encrypted configuration (aes-128-ecb)
 - Batch transactions
 - Timer
 - Max amount per tx, XEMsign stops if amount exceeded (meaning something goes wrong)
@@ -20,32 +21,26 @@ To connect your NCC to a remote NIS:<br>
 You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
 
-Then you need to insert correct informations inside XEMsign.js:
-
--Line 17: minutes is the number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmations and still unconfirmed).
-
--Line 72: 100 is the maximal XEM amount per tx, in case of a bigger transaction, the program stop.
-
--Line 83: 100000 is maximal amount per days.
-
--Line 23: the account you want to watch new unconfirmed transactions for.
-
--Line 38: your wallet informations and transaction parameters:<br>
+Then you need to insert correct informations inside access.json:<br>
 {<br>
-wallet: "YourWallet",<br>
-password: "PasswordForThisWallet",<br>
-account: "TheCosignatoryAccount",<br>
-multisigAddress: "TheMultisigAccount",<br>
-innerHash: {<br>
-                data: dataHash (do not change, automatically inserted after the pull)<br>
-            },<br>
-hoursDue: 24,<br>
-fee: 6000000<br>
-}
+"wallet" : "yourWallet",<br>
+"walletPassword" : "yourWalletPassword",<br>
+"cosignatoryAccount" : "cosignatoryAccount",<br> //Account you want to watch new unconfirmed transactions for
+"multisigAddress" : "multisigAccountAddress",<br>
+"hoursDue" : 24,<br>
+"fee" : 6000000,<br>
+"timer" : 1, //Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmations and still unconfirmed).<br>
+"dayliTimer" : 1440, //Timer before dayliAmount reset to 0<br>
+"maxAmount" : 100, //Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
+"maxDayliAmount" : 100000 //Maximal amount per days.<br>
+}<br>
 
 That's it. Run XEMsign.js using:
 
 nodejs pathTo/XEMsign.js
+
+Enter a password to encrypt access.json, then you MUST delete the old uncrypted access.json and empty your bin.<br>
+Start XEMsign again. Enter the password you've chosen and your're good.
 
 # Warning 
 
