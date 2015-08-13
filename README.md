@@ -25,7 +25,7 @@ Then you need to insert correct informations inside access.json:<br>
 {<br>
 "wallet" : "yourWallet",<br>
 "walletPassword" : "yourWalletPassword",<br>
-"cosignatoryAccount" : "cosignatoryAccount",<br> //Account you want to watch new unconfirmed transactions for
+"cosignatoryAccount" : "cosignatoryAccount",<br>
 "multisigAddress" : "multisigAccountAddress",<br>
 "hoursDue" : 24,<br>
 "fee" : 6000000,<br>
