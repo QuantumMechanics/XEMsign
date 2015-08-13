@@ -33,8 +33,6 @@ if (fs.existsSync('./access.json')) {
 	var ef         = "./access.json.enc";
 	var express    = require('express');
 	var app        = express();
-	var SecureConf = require('secure-conf');
-	var sconf      = new SecureConf();
 	sconf.decryptFile(ef, function(err, file, content) {
                 if (err) {
 		      console.log("Wrong password !");
