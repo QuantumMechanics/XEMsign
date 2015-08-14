@@ -174,14 +174,14 @@ if (fs.existsSync('./access.json')) {
 				//Batch report
 				console.log("Total transactions: ");
 				console.log(totalUnconfirmed);
-				time =+ _timer * 60 * 1000;
+				time += _timer * 60 * 1000;
 				console.log("Done, waiting...");
 
 			}
 				else{
 					var bigDay = "MAXIMAL AMOUNT REACHED !";
 					console.log(bigDay);
-					time =+ _timer * 60 * 1000;
+					time += _timer * 60 * 1000;
 				}
 
 			} //end for
