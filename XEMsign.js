@@ -39,7 +39,7 @@ if (fs.existsSync('./access.json')) {
 	//Decryption
 	sconf.decryptFile(ef, function(err, file, content) {
                 if (err) {
-		      console.log("Wrong password !"); //Not showing up...
+		      console.log("Wrong password !"); //Not showing up... But big error log. Program stop.
                    // console.log('Failed to decrypt %s, error is %s', file, err);
                 } else {
 		    console.log("\n");
