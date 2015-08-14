@@ -22,6 +22,7 @@ You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
 
 Then you need to insert correct informations inside access.json:<br>
+All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
 - <b>Wallet & transaction informations</b>
 - <b>timer</b>: Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmed).<br>
 - <b>dayliTimer</b>: Timer before dayliAmount reset to 0 in minutes<br>
