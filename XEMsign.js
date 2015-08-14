@@ -1,4 +1,5 @@
 console.log("\n");
+console.log("=================================================");
 console.log("======== XEMsign - Automated cosignature ========");
 console.log("=================================================");
 console.log("\n");
