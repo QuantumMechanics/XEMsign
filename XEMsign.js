@@ -87,7 +87,7 @@ if (fs.existsSync('./access.json')) {
 					dailyAmount = 0;
 				}
 
-			//Now we pull the unconfirmed transactions using local NCC
+			//Now we pull the unconfirmed transactions from local NCC
 			var data = {
 			    account: _cosignatoryAccount
 			};
