@@ -33,7 +33,7 @@ Next, Run XEMsign.js using:
 
 nodejs pathTo/XEMsign.js
 
-Enter a password to encrypt access.json, then you MUST delete the old unencrypted access.json and empty your bin. (I think maybe you should also remove the content of the file, type random strings and save before deleting, need improvements).<br>
+Enter a password to encrypt access.json, then you MUST delete the old unencrypted access.json and empty your bin. (I think maybe you should also remove the content of the file, type random strings and save before deleting, need improvements).<br><br>
 Start XEMsign again. Enter the password you've chosen and your're good.
 
 Normally it should work out of the box (do not forget NEM.js). If not, you need to install express and secure-conf:
