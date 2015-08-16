@@ -78,7 +78,7 @@ if (fs.existsSync('./access.json')) {
 			var amount = [];
 			var time = 0;
 
-			//Every 5 minutes, we check for unconfirmed transactions
+			//Every n minutes, we check for unconfirmed transactions
 			setInterval(function() {
 
 				//If 24h => reset dailyAmount
@@ -154,7 +154,7 @@ if (fs.existsSync('./access.json')) {
 			};
 
 
-			//Maximal Amount is 100 XEM per tx
+			//Maximal Amount is _maxAmount XEM per tx
 			if (amount[i] > _maxAmount)
 			{
 				console.log("There is a problem, only 100 XEMs transaction allowed !");
@@ -162,7 +162,7 @@ if (fs.existsSync('./access.json')) {
 				console.log(dataHash[i]);
 				return; //In this case we stop cosigning
 			}
-			//Maximum dayliAmount is 100000 XEM
+			//Maximum dayliAmount is _maxDayliAmount XEM
 			else if (dailyAmount < _maxDayliAmount)
 			{
 			//Sign transaction
