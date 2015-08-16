@@ -78,7 +78,7 @@ if (fs.existsSync('./access.json')) {
 			var amount = [];
 			var time = 0;
 
-			//Every n minutes, we check for unconfirmed transactions
+			//Every _timer minutes, we check for unconfirmed transactions
 			setInterval(function() {
 
 				//If 24h => reset dailyAmount
