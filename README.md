@@ -21,7 +21,7 @@ To connect your NCC to a remote NIS:<br>
 You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
 
-XEMsign check every n minutes for transactions initiated by XEMsend. The program signs transactions only if they meet requirements set in access.json
+XEMsign check every n minutes for transactions initiated by <a href="https://github.com/QuantumMechanics/XEMsend" target="_blank"><b>XEMsend</b></a>. The program signs transactions only if they meet requirements set in access.json
 
 You need to insert correct informations inside access.json:<br>
 All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
