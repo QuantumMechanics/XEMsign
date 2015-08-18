@@ -14,7 +14,7 @@
 "walletPassword": "yourWalletPassword",
 "fee": 2000000,
 "multisigFee": 6000000,
-"timer" : 1,
+"timer" : 5,
 "dayliTimer" : 1440,
 "maxAmount" : 100,
 "maxDayliAmount" : 100000
