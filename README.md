@@ -29,7 +29,7 @@ XEMsend is the transaction initiator. It's the first cosignatory who ask for XEM
 You need to insert correct informations inside SENDaccess.json:<br>
 All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
 - <b>Database connection parameters</b>
-- <b>Wallet & transaction parameters</b> (Warning, for "amount" only, value is in the smallest possible NEM fraction, that means that 1000000 means 1.000000 NEM).
+- <b>Wallet & transaction parameters</b> (Warning, for "amount", "fee" and "multisigFee" only, values are in the smallest possible NEM fraction, that means that 1000000 means 1.000000 NEM).
 - <b>timer</b>: Number of minutes between each pull, set by default to 5.
 - <b>dayliTimer</b>: Timer before dayliAmount reset to 0 in minutes<br>
 - <b>maxAmount</b>: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
