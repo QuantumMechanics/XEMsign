@@ -1,14 +1,13 @@
-# XEMsign / XEMsend
-Automated multisignature requests and cosignature for XEM Cryptocurrency
+# XEMsign
+Automated cosignature for XEM Cryptocurrency
 
 # Features
 - Password encrypted configuration (aes-128-ecb)
-- Batch transactions & signatures
+- Batch signatures
 - Timer
-- Max amount per tx, Both programs stops if amount exceeded (meaning something goes wrong)
+- Max amount per tx, program stops if amount exceeded (meaning something goes wrong)
 - Max dayli amount
 - Transaction details
-- MySQL support
 
 # How to
 
@@ -21,27 +20,6 @@ To connect your NCC to a remote NIS:<br>
 
 You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
-
-# XEMsend
-
-XEMsend is the transaction initiator. It's the first cosignatory who ask for XEMsign signatures. XEMsend pull addresses meeting requirements from MySQL database and initiate batch signatures requests.
-
-You need to insert correct informations inside SENDaccess.json:<br>
-All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
-- <b>Database connection parameters</b>
-- <b>Wallet & transaction parameters</b> (Warning, for "amount", "fee" and "multisigFee" only, values are in the smallest possible NEM fraction, that means that 1000000 means 1.000000 NEM).
-- <b>timer</b>: Number of minutes between each pull, set by default to 5.
-- <b>dayliTimer</b>: Timer before dayliAmount reset to 0 in minutes<br>
-- <b>maxAmount</b>: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
-- <b>maxDayliAmount</b>: Maximal amount per days.<br>
-
-Next, Run XEMsend.js using:
-
-nodejs pathTo/XEMsend.js
-
-Then follow instructions.
-
-# XEMsign
 
 XEMsign check every n minutes for transactions initiated by XEMsend. The program signs transactions only if they meet requirements set in access.json
 
