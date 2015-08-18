@@ -24,7 +24,7 @@ Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/node
 
 # XEMsend
 
-XEMsend is the transaction initiator. It's the first cosignatory who ask for XEMsign signatures. XEMsend pull addresses meeting requirement from MySQL database and initiate batch signatures requests.
+XEMsend is the transaction initiator. It's the first cosignatory who ask for XEMsign signatures. XEMsend pull addresses meeting requirements from MySQL database and initiate batch signatures requests.
 
 You need to insert correct informations inside SENDaccess.json:<br>
 All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
