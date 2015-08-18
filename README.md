@@ -43,7 +43,7 @@ Then follow instructions.
 
 # XEMsign
 
-XEMsign check every n minutes for transactions initiated by XEMsend. The program signs transactions only if they meet requierements set in access.json
+XEMsign check every n minutes for transactions initiated by XEMsend. The program signs transactions only if they meet requirements set in access.json
 
 You need to insert correct informations inside access.json:<br>
 All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
