@@ -1,11 +1,11 @@
-# XEMsign
-Automated cosignature for XEM Cryptocurrency
+# XEMsign / XEMsend
+Automated cosignature and multisignature requests for XEM Cryptocurrency
 
 # Features
 - Password encrypted configuration (aes-128-ecb)
 - Batch transactions & signatures
 - Timer
-- Max amount per tx, XEMsign stops if amount exceeded (meaning something goes wrong)
+- Max amount per tx, Both programs stops if amount exceeded (meaning something goes wrong)
 - Max dayli amount
 - Transaction details
 - MySQL support
