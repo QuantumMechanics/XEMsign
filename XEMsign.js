@@ -30,7 +30,7 @@ if (fs.existsSync('./access.json')) {
 	);
 }
 	else{
-	console.log("Enter your password start XEMsign:");
+	console.log("Enter your password to start XEMsign:");
 	var SecureConf = require('secure-conf');
 	var sconf      = new SecureConf();
 	var ef         = "./access.json.enc";
