@@ -1,5 +1,5 @@
 # XEMsign / XEMsend
-Automated cosignature and multisignature requests for XEM Cryptocurrency
+Automated multisignature requests and cosignature for XEM Cryptocurrency
 
 # Features
 - Password encrypted configuration (aes-128-ecb)
