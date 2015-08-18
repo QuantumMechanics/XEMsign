@@ -43,11 +43,10 @@ Normally it should work out of the box. If not, you need to check:
 - If NEM.js is present in your folder
 - If you have deleted access.json after encryption.
 
-If still not working, you need to install Express, Secure-conf and MySQL:
+If still not working, you need to install Express and Secure-conf:
 
 - Express: npm install express
 - Secure-conf: npm install secure-conf
-- Mysql: npm install mysql
 
 # Warning 
 
