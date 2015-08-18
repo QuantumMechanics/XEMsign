@@ -63,7 +63,7 @@ Then follow instructions.
 
 Normally it should work out of the box. If not, you need to check:
 - If NEM.js is present in your folder
-- If you have deleted access.json and SENDaccess.json
+- If you have deleted access.json and SENDaccess.json after encryption.
 
 If still not working, you need to install Express, Secure-conf and MySQL:
 
