@@ -109,6 +109,7 @@ if (fs.existsSync('./access.json')) {
 			{
 				console.log("\n");
 				console.log("No transaction to sign. Waiting...");
+				time += _timer * 60 * 1000;
 			}
 			else
 			{
