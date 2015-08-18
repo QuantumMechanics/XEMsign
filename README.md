@@ -61,7 +61,12 @@ Then follow instructions.
 
 # Not working ?
 
-Normally it should work out of the box (do not forget NEM.js). If not, you need to install express and secure-conf:
+Normally it should work out of the box. If not, you need to check:
+- If NEM.js is present in your folder
+- If you have deleted access.json and SENDaccess.json
+
+If still not working, you need to install Express, Secure-conf and MySQL:
+
 - Express: npm install express
 - Secure-conf: npm install secure-conf
 - Mysql: npm install mysql
