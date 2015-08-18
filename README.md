@@ -47,7 +47,7 @@ XEMsign check every n minutes for transactions initiated by XEMsend. The program
 
 You need to insert correct informations inside access.json:<br>
 All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
-- <b>Wallet & transaction informations</b>
+- <b>Wallet & transaction informations</b> Warning, for "fee" only, value is in the smallest possible NEM fraction, that means that 1000000 means 1.000000 NEM).
 - <b>timer</b>: Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmed).<br>
 - <b>dayliTimer</b>: Timer before dayliAmount reset to 0 in minutes<br>
 - <b>maxAmount</b>: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
