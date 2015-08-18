@@ -75,11 +75,13 @@ NEM = require('./NEM.js');
 // create an instance using default configuration options
 var nem = new NEM();
 
+//Setting pull interval
 var the_interval = _timer * 60 * 1000;
 console.log("Success...");
 console.log("\n");
 console.log("Starting first check in", _timer, "minutes");
 
+//starting with 0
 var dayliAmount = 0;
 var time = 0;
 
@@ -91,6 +93,7 @@ setInterval(function() {
 	dailyAmount = 0;
 	}
 
+	//DB connection
 	var mysql      = require('mysql');
 	var connection = mysql.createConnection({
 	  host     : _DBhost,
@@ -106,7 +109,8 @@ setInterval(function() {
 	    console.log("Error connecting database ... \n\n");  
 	}
 	});
-
+	
+	//Select addresses not claimed with balance == _amount (/1000000 because the _amount value is in the smallest possible NEM fraction, that means that 1000000 means 1.000000 NEM.)
 	connection.query('SELECT * from XEMfaucet WHERE balance=? AND claimed=0', [_amount/1000000], function(err, rows, fields) {
 
 	if (rows.length == 0)
@@ -115,8 +119,9 @@ setInterval(function() {
 		time += _timer * 60 * 1000; 
 	} else{	
 		var i;
-		for(i=0; i < rows.length; i++)
+		for(i=0; i < rows.length; i++) //Batch Tx
 		{
+			//Cleaning "-" from addresses if any
 			var cleanAddress = [];
 			cleanAddress[i] = rows[i].XEMaddress.replace(/[^a-z\d\s]+/gi, "");
 		
@@ -148,7 +153,7 @@ setInterval(function() {
 		//Maximal Amount is _maxAmount XEM per tx
 		if (rows[i].balance > _maxAmount)
 		{
-		console.log("There is a problem in database, maximum amount per transaction exceeded");
+		console.log("There is a problem maximum amount per transaction exceeded");
 		console.log("Following Transaction cause problems:");
 		console.log(rows[i].id);
 		throw new Error('Something goes wrong !');
@@ -156,7 +161,7 @@ setInterval(function() {
 		//Maximum dayliAmount is _maxDayliAmount XEM
 		else if (dayliAmount < _maxDayliAmount)
 		{
-		//Sign transaction
+		//Initiate signature request
 		nem.nccPost('/wallet/account/transaction/send',transac[i]
 		,function(err) {
 		console.log(err);
@@ -165,6 +170,7 @@ setInterval(function() {
 		);
 		dayliAmount += rows[i].balance;
 		time += _timer * 60 * 1000;
+		//We set addresses to claimed
 		connection.query('UPDATE XEMfaucet SET claimed=1 WHERE XEMaddress= ?', [rows[i].XEMaddress], function (err, result) {
 		    if (err) throw err;
 		  });
