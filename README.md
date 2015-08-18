@@ -41,7 +41,7 @@ Then follow instructions.
 
 Normally it should work out of the box. If not, you need to check:
 - If NEM.js is present in your folder
-- If you have deleted access.json and SENDaccess.json after encryption.
+- If you have deleted access.json after encryption.
 
 If still not working, you need to install Express, Secure-conf and MySQL:
 
@@ -56,8 +56,7 @@ If still not working, you need to install Express, Secure-conf and MySQL:
 To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use those computers for surfing the net.
 
 # Work in progress
-- Check multisigAccount balance and stop initiating tx with XEMsend if insufficient funds.
-- Fill access.json and SENDaccess.json with random datas and auto delete.
+- Fill access.json with random datas and auto delete.
 
 <b>BTC</b>: 1BRuxYZ3ohDJkfEWKVMWAiYrAYjwNSaPJs<br>
 <b>XEM</b>: NAMOAV-HFVPJ6-FP32YP-2GCM64-WSRMKX-A5KKYW-WHPY
