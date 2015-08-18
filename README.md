@@ -78,7 +78,7 @@ If still not working, you need to install Express, Secure-conf and MySQL:
 To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use those computers for surfing the net.
 
 # Work in progress
-- Check multisigAccount balance and stop initiating tx with XEMsend if unsufficient funds.
+- Check multisigAccount balance and stop initiating tx with XEMsend if insufficient funds.
 - Fill access.json and SENDaccess.json with random datas and auto delete.
 
 <b>BTC</b>: 1BRuxYZ3ohDJkfEWKVMWAiYrAYjwNSaPJs<br>
