@@ -3,11 +3,12 @@ Automated cosignature for XEM Cryptocurrency
 
 # Features
 - Password encrypted configuration (aes-128-ecb)
-- Batch signatures
+- Batch transactions & signatures
 - Timer
 - Max amount per tx, XEMsign stops if amount exceeded (meaning something goes wrong)
 - Max dayli amount
 - Transaction details
+- MySQL support
 
 # How to
 
@@ -21,7 +22,30 @@ To connect your NCC to a remote NIS:<br>
 You need NodeJs.<br>
 Be sure you have NEM.js from <a href="https://github.com/NewEconomyMovement/nodejs2nem" target="_blank">nodejs2nem</a> inside your folder.
 
-Then you need to insert correct informations inside access.json:<br>
+# XEMsend
+
+XEMsend is the transaction initiator. It's the first cosignatory who ask for XEMsign signatures. XEMsend pull addresses meeting requirement from MySQL database and initiate the transaction.
+
+You need to insert correct informations inside SENDaccess.json:<br>
+All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
+- <b>Database connection parameters</b>
+- <b>Wallet & transaction parameters</b>
+- <b>timer</b>: Number of minutes between each pull, set by default to 5.
+- <b>dayliTimer</b>: Timer before dayliAmount reset to 0 in minutes<br>
+- <b>maxAmount</b>: Maximal XEM amount per tx, in case of a bigger transaction, the program stop.<br>
+- <b>maxDayliAmount</b>: Maximal amount per days.<br>
+
+Next, Run XEMsend.js using:
+
+nodejs pathTo/XEMsend.js
+
+Then follow instructions.
+
+# XEMsign
+
+XEMsign check every n minutes for transactions initiated by XEMsend. The program signs transactions only if they meet requierements set in access.json
+
+You need to insert correct informations inside access.json:<br>
 All addresses must be in the "NAMOAVHFVPJ6FP32YP2GCM64WSRMKXA5KKYWWHPY" format. NO "-".
 - <b>Wallet & transaction informations</b>
 - <b>timer</b>: Number of minutes between each pull, set by default to 5 (1 cause the resignature of the same transaction because it has no time to get confirmed).<br>
@@ -33,12 +57,14 @@ Next, Run XEMsign.js using:
 
 nodejs pathTo/XEMsign.js
 
-Enter a password to encrypt access.json, then you MUST delete the old unencrypted access.json and empty your bin. (I think maybe you should also remove the content of the file, type random strings and save before deleting, need improvements).<br><br>
-Start XEMsign again. Enter the password you've chosen and your're good.
+Then follow instructions.
+
+# Not working ?
 
 Normally it should work out of the box (do not forget NEM.js). If not, you need to install express and secure-conf:
 - Express: npm install express
 - Secure-conf: npm install secure-conf
+- Mysql: npm install mysql
 
 # Warning 
 
@@ -47,7 +73,8 @@ Normally it should work out of the box (do not forget NEM.js). If not, you need 
 To insure maximum security, you can deploy as many XEMsign as you need cosignatures but preferably on different computers in different locations. And do not use those computers for surfing the net.
 
 # Work in progress
-- XEMsend.js this one will be the part that initiate batch multisignature requests for addresses meeting requierements in mysql database.
+- Check multisigAccount balance and stop initiating tx with XEMsend if unsufficient funds.
+- Fill access.json and SENDaccess.json with random datas and auto delete.
 
 <b>BTC</b>: 1BRuxYZ3ohDJkfEWKVMWAiYrAYjwNSaPJs<br>
 <b>XEM</b>: NAMOAV-HFVPJ6-FP32YP-2GCM64-WSRMKX-A5KKYW-WHPY
