@@ -161,7 +161,7 @@ if (fs.existsSync('./access.json')) {
 				console.log("There is a problem, only 100 XEMs transaction allowed !");
 				console.log("Following Transaction cause problems:");
 				console.log(dataHash[i]);
-				return; //In this case we stop cosigning
+				throw new Error('Something goes wrong !'); //In this case we stop cosigning
 			}
 			//Maximum dayliAmount is _maxDayliAmount XEM
 			else if (dailyAmount < _maxDayliAmount)
