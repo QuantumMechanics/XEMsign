@@ -82,7 +82,7 @@ if (fs.existsSync('./access.json')) {
 			setInterval(function() {
 
 				//If 24h => reset dailyAmount
-				if (time == _dailyTimer * 60 * 1000)
+				if (time > _dailyTimer * 60 * 1000)
 				{
 					dailyAmount = 0;
 				}
